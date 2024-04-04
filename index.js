@@ -12,5 +12,17 @@ const tutorials = [
 ];
 
 const titleCased = () => {
+  // map iterates thro' the sentences / items of the array to return individual sentences
+  return tutorials.map(tutorial => {
+    // run .split to break sentence where there's space into individual words
+    return tutorial.split(" ").map(word => {
+      // run .charAt to capitalize 1st letter
+      return word.charAt(0).toUpperCase() + word.substring(1);
+    // run join to merge sentences leaving a space between words
+  }).join(" ");
+  });
   return tutorials
+  
 }
+
+// ref: https://www.freecodecamp.org/news/how-to-capitalize-words-in-javascript/
